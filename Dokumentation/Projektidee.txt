@@ -1,1 +1,4 @@
-Ich habe noch keine Ideen.
+Meine Idee besteht in der Erstellung einer Webanwendung, die es ihren Nutzern erlaubt, Wetten auf virtuelle Kursentwicklungen und virtuelle Sportergebnisse von imaginären Sportarten zu setzen. Die Entwicklung der Kurse wird durch den Zufall und durch ausgewählte Umweltfaktoren bestimmt, die nur die Entwickler der Anwendung kennen.
+Es soll einen Log-In-Bereich geben.
+Bei der Nutzung der Anwendung werden nutzungsrelevante Daten erhoben und gespeichert. Sie ermöglichen es, dem/r Nutzer/in in seinem/ihrem Log-In-Bereich persönliche Statistiken anzuzeigen und sich mit anderen zu vergleichen.
+Es wird virtuelles Guthaben eingesetzt. Bei der Anmeldung erhält der/die Nutzer/in ein Startguthaben, das er/sie verwenden kann. Fällt sein/ihr Guthaben auf null, kann das Guthaben wieder auf den Startwert zurückgesetzt werden.
