@@ -1,0 +1,140 @@
+<!--
+
+Struktur
+
+-------------------------------------------------------------------------
+Wenn nicht eingeloggt:
+-------------------------------------------------------------------------
+
+1) - Navigationsleiste (Nutzer können so zwischen den Seiten navigieren)
+
+        - Home (Home-Seite mit Vorschlägen zu aktuell möglichen Wetten) *2a)
+        - Einloggen/Registrieren (Es öffnet sich bei Klick ein Fenster) *2b) und 2c)
+
+2a) HOME:   4 x Container (Beinhalten jeweils 2 bis 4 Container mit aktuell möglichen Spielen/Wetten und jeweils einem Bild -> Kachelartiger Aufbau)
+                -Container(Inhalt z.B.: Aktuelle Resultate)
+                    -Bild-Container
+                    -Textfeld
+                -Container (Inhalt z.B.: Aktuelle Kurswerte)
+                    -Bild-Container
+                    -Textfeld
+                -Container [optional] (Inhalt z.B.: Aktuelle Sportwetten)
+                    -Bild-Container
+                    -Textfeld
+                -Container [optional] (Inhalt z.B.: Aktuelle Kurswetten)
+                    -Bild-Container
+                    -Textfeld
+
+2b) EINLOGGEN:   Container (Beinhaltet die Anmeldemaske, öffnet sich nach Klick auf "Einloggen" in Navigationsleiste)
+                    - Form (Beinhaltet die Felder zur Eingabe der Anmeldedaten)
+                        - Titel-Feld (Nutzername)
+                        - Input-Feld (für Nutzername)
+                        - Titel-Feld (Passwort)
+                        - Input-Feld (für Passwort)
+                        - Button (Anmelden)
+                    - Textfeld (Hinweis, wer noch nicht angemeldet ist, kann sich registrieren)
+                        - Link (Zur Registrierung)
+
+2c) REGISTRIEREN: Container (Beinhaltet die Anmeldemaske, öffnet sich nach Klick auf "Einloggen" in Navigationsleiste)
+                    - Form (Beinhaltet die Felder zur Eingabe der Registrierungsdaten
+                        - Titel-Feld (Nutzername)
+                        - Input-Feld (für Nutzername)
+                        - Titel-Feld (Passwort)
+                        - Input-Feld (für Passwort)
+                        - Titel-Feld (Passwort Wiederholen)
+                        - Input-Feld (für zu wiederholendes Passwort)
+                        - Kontrollkästchen (Zustimmung der Nutzungsbedingungen)
+                        - Button (Registrieren)
+
+
+3) Footer-Container 
+    - Datenschutz
+    - Verwendung von Cookies
+    - Nutzungsbedingungen
+    - Impressum
+### An dieser Stelle erfolgt zur Vereinfachung keine einzelne Struktur der o.g. Unterseiten (Datenschutz, Cookies, Nutzungsbedingungen, Impressum) da diese lediglich aus einem Content-Container mit mehreren Absätzen bestehen, die mit den entprechenden Informationen gefüllt werden.) ###
+
+
+
+-------------------------------------------------------------------------
+Wenn eingeloggt:
+-------------------------------------------------------------------------
+
+
+1) - Navigationsleiste (Nutzer können so zwischen den Seiten navigieren)
+
+        - Home (Home-Seite mit Vorschlägen zu aktuell möglichen Wetten) *2a)
+        - Sport (Alle möglichen Sportwetten) *2b)
+        - Kurse (Alle möglichen Kurswetten) *2c)
+        - Statistik (Persönliche Wett-Historie) *2d)
+        - Profil (persönliche Daten einsehen und ändern) *2e)
+        - Logout (ausloggen) -> zurück zur Home Seite (nicht eingeloggt: *2a))
+
+2a) HOME:   4 x Container (Beinhalten jeweils 2 bis 4 Container mit aktuell möglichen Spielen/Wetten und jeweils einem Bild -> Kachelartiger Aufbau)
+                -Container(Inhalt z.B.: Aktuelle Resultate)
+                    -Bild-Container
+                    -Textfeld
+                -Container (Inhalt z.B.: Aktuelle Kurswerte)
+                    -Bild-Container
+                    -Textfeld
+                -Container [optional] (Inhalt z.B.: Aktuelle Sportwetten)
+                    -Bild-Container
+                    -Textfeld
+                -Container [optional] (Inhalt z.B.: Aktuelle Kurswetten)
+                    -Bild-Container
+                    -Textfeld
+
+2b) SPORT:  Container (Beinhaltet die Tabellen mit den Spielen, auf die gewettet werden kann)
+                - Tabelle (unterschiedlich viele Zeilen (je nach Spielanzahl); 6 Spalten: 1. Zeit, 2. Begegnung, 3. Sieg1, 4. Unentschieden, 5. Sieg2, 6. Betrag der eingesetzt werden soll)
+                - Button ("Wette setzen")
+            
+
+2c) KURSE: Container (Beinhaltet 4 Container in denen die Kurse verlaufen.)
+                - Container1
+                    - Kursgrafik
+                    - Eingabefeld (wie viel soll gesetzt werden)
+                    - Button (long)
+                    - Button (short)
+                - Container2 
+                    ...
+                    ...
+                    ... (wie oben)
+                - Container3
+                    ...
+                    ...
+                    ... (wie oben)
+                -Container4
+                    ...
+                    ...
+                    ... (wie oben)
+
+2d) STATISTIK: Container (Beinhaltet zwei Listen zum Wettverlauf [Sport / Kurse])
+                - Liste (Wettverlauf Sport)
+                - Liste (Wettverlauf Kurse)
+            Container (Beinhaltet Zusammenfassung gesetztes virtuelles Guthaben / gewonnenes virtuelles Guthaben)
+                -Tabelle (Verlauf und Zusammenfassung)
+
+2e) PROFIL: (Profilinformationen, Passwort ändern und Möglichkeit Guthaben aufzufüllen, wenn auf null)
+                - Form
+                    - Titel (alter Nutzername)
+                    - Titel (neuer Nutzername)
+                    - Eingabefeld (neuer Nutzername)
+                    - Titel (altes Passwort)
+                    - Titel (neues Passwort *optional)
+                    - Eingabefeld (neues Passwort *optional)
+                    - Button (Senden)
+
+                -Button (Wenn Guthaben auf Null -> auffüllen)
+
+
+3) Footer-Container
+    - Datenschutz
+    - Verwendung von Cookies
+    - Nutzungsbedingungen
+    - Impressum
+### An dieser Stelle erfolgt zur Vereinfachung keine einzelne Struktur der o.g. Unterseiten (Datenschutz, Cookies, Nutzungsbedingungen, Impressum) da diese lediglich aus einem Content-Container mit mehreren Absätzen bestehen, die mit den entprechenden Informationen gefüllt werden. ###
+
+
+-------------------------------------------------------------------------
+
+-->
