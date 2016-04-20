@@ -1,4 +1,4 @@
-=== Projektidee janman22, 2016-04-05 ===
+﻿=== Projektidee janman22, 2016-04-05 ===
 
 Meine Idee besteht in der Erstellung einer Webanwendung, die es ihren Nutzern erlaubt, Wetten auf virtuelle Kursentwicklungen und virtuelle Sportergebnisse von imaginären Sportarten zu setzen. Die Entwicklung der Kurse wird durch den Zufall und durch ausgewählte Umweltfaktoren bestimmt, die nur die Entwickler der Anwendung kennen.
 
@@ -91,3 +91,10 @@ Markus Alpers
 ==Feedback Jonathan==
 Hat alles. Daumen Hoch.
 Eventuell könnte man die Umweltbedingungen noch etwas nachvollziehbarer gestalten. (z.B. an Wetterbedingungen an bestimmten Orten binden/ An das Politbarometer binden/ An die Anfangsbuchstaben der Top 100 Titel der deutschen Singlecharts...) Dadurch kann man die Aufmerksamkeit der Spieler lenken, wie man will und es wirkt nicht so beliebig.
+
+
+==Feedback Jaacii==
+Die Idee stelle ich mir umgesetzt ganz lstig vor. Willst du die imanigären Sportarten selbst erfinden?
+Ansonsten könntest du die Nutzer die Sportarten entwickeln lassen wenn es klappt. Das würde die Interaktivität nochmal erhöhen.
+Noch einfallen würde mir, dass du ein System zum Guthaben aufladen einbauen könntest (natürlich ohne echtes Geld). Dies würde dann nochmal etwas realistischer wirken als das Guthaben auf den Startwert zuruckzusetzen.
+Viel Erfolg
