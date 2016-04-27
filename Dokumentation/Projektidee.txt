@@ -98,3 +98,9 @@ Die Idee stelle ich mir umgesetzt ganz lstig vor. Willst du die imanigären Spor
 Ansonsten könntest du die Nutzer die Sportarten entwickeln lassen wenn es klappt. Das würde die Interaktivität nochmal erhöhen.
 Noch einfallen würde mir, dass du ein System zum Guthaben aufladen einbauen könntest (natürlich ohne echtes Geld). Dies würde dann nochmal etwas realistischer wirken als das Guthaben auf den Startwert zuruckzusetzen.
 Viel Erfolg
+
+==Feedback Honnullul==
+Schaut gut und vor allem realisierbar aus.
+Um das ganze nicht zu schnell langweilig werden zu lassen, wären mehrere Arten von Wetten möglich.
+Die einfache ist ja, dass Kurs A in Zeit B steigt oder fällt. Das kann man dann noch ausbauen: Veränderung um mindestens/maximal C Punkte. Danach geht es wieder um min/max D Punkte runter/rauf.
+Das Risiko bei solchen komplexeren Wetten ist natürlich viel höher, und man kriegt wahrscheinlich nur einen Teil des Maximalgewinns. Dafür ist besonders in der Statistik ein hoher Gewinnanteil komplexer Wetten viel eindrucksvoller als normale Wetten.
