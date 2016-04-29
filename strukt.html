@@ -1,5 +1,5 @@
 <!--
-1) - Navigationsleiste (Nutzer können so zwischen den Seiten navigieren)
+-01- Navigationsleiste (Nutzer können so zwischen den Seiten navigieren)
 
         - Home (Home-Seite mit Vorschlägen zu aktuell möglichen Wetten) *2a)
         - Sport (Alle möglichen Sportwetten) *2b) -> nur wenn eingeloggt
@@ -8,21 +8,41 @@
         - Profil (persönliche Daten einsehen und ändern) *2e) -> nur wenn eingeloggt
         - Logout (ausloggen) -> zurück zur Home Seite (nicht eingeloggt: *2a)) -> nur wenn eingeloggt, ansonsten Login/Registrieren *2x) und *2y)
 
-2a) HOME:   4 x Container (Beinhalten jeweils 2 bis 4 Container mit aktuell möglichen Spielen/Wetten und jeweils einem Bild -> Kachelartiger Aufbau)
-                -Container(Inhalt z.B.: Aktuelle Resultate)
-                    -Bild-Container
-                    -Textfeld
-                -Container (Inhalt z.B.: Aktuelle Kurswerte)
-                    -Bild-Container
-                    -Textfeld
-                -Container [optional] (Inhalt z.B.: Aktuelle Sportwetten)
-                    -Bild-Container
-                    -Textfeld
-                -Container [optional] (Inhalt z.B.: Aktuelle Kurswetten)
-                    -Bild-Container
-                    -Textfeld
+-02-Container (4 x Beinhalten jeweils 2 bis 4 Container mit aktuell möglichen Spielen/Wetten und jeweils einem Bild -> Kachelartiger Aufbau)
+-03-Container(Inhalt z.B.: der -04-Container mit: Aktuelle Resultate, Aktuelle Kurswerte, Aktuelle Sportwetten, Aktuelle Kuswetten)
+-04-Container(Graphen von Kursen)
+-05-Graph
+-06-Container(Tabellen von Kursen oder Wettmöglichkeiten)
+-07-Tabellen (mit Kursen)
+-08-Tabellen (Resultaten)
+-09-Tabellen (mit Wettmöglichkeiten)
+-10-Eingabefeld in Tabelle (wie viel gesetzt werden soll)
+-11-Eingabefeld unter Graph (wie viel gesetzt werden soll)
+-12-Textfeld (Zur Beschriftung und Betitelung)
+-13-Button (Wette setzen)
+-14-Button (long / Wette setzen)
+-15-Button (short / Wette setzen)
+-16-Container ((Beinhaltet zwei Tabellen zum Wettverlauf [Sport / Kurse]))
+-17-Tabelle (Wettverlauf Sport)
+-18-Tabelle (Wettverlauf Kurse)
+-19-Container (Beinhaltet Zusammenfassung gesetztes virtuelles Guthaben / gewonnenes virtuelles Guthaben)
+-20-Tabelle (Verlauf und Zusammenfassung)
+-21-Form (Passwort ändern und Möglichkeit Guthaben aufzufüllen, wenn auf null)
+-22-Label (im Form für die input Felder)
+-23-Eingabefeld (input Felder in den Forms)
+-24-Button Submit (in Forms)
+-24-Button (wenn Guthaben auf null auffüllen)
+-25-Paragraph (z.B. Hinweise für Fehler bei der Übermittlung von Forms)
+-26-Paragraph (z.B. Hinweise für Forms, evtl. mit Link "zur Registrierung")
+-27-Kontrollkästchen (Form-Element)
+-28-Footer (z.B. Datenschutz, Verwendung von Cookies, Nutzungsbedingungen, Impressum auf jeweiligen Seiten)
+-29-h1 (Überschirften für z.B. Datenschutz, Verwendung von Cookies, Nutzungsbedingungen, Impressum auf jeweiligen Seiten)
+-30-Article (Beinhaltet die Paragraphen in den o.g. Punkten aus dem Footer)
+-31- Paragraph (Absätze in den o.g. Punkten aus dem Footer)
 
-2b) SPORT:  Container (Beinhaltet die Tabellen mit den Spielen, auf die gewettet werden kann)
+==========Gedankenstütze:==========
+2b) SPORT:  
+Container (Beinhaltet die Tabellen mit den Spielen, auf die gewettet werden kann)
                 - Tabelle (unterschiedlich viele Zeilen (je nach Spielanzahl); 6 Spalten: 1. Zeit, 2. Begegnung, 3. Sieg1, 4. Unentschieden, 5. Sieg2, 6. Betrag der eingesetzt werden soll)
                 - Button ("Wette setzen")
             
@@ -83,8 +103,7 @@
 
 ### An dieser Stelle erfolgt zur Vereinfachung keine einzelne Struktur der o.g. Unterseiten (Datenschutz, Cookies, Nutzungsbedingungen, Impressum) da diese lediglich aus einem Content-Container mit mehreren Absätzen bestehen, die mit den entprechenden Informationen gefüllt werden. ###
 
-
--------------------------------------------------------------------------
+==========Gedankenstütze Ende==========
 
 -->
 
