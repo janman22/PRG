@@ -1,6 +1,12 @@
 <!--
--01- Navigationsleiste (Nutzer können so zwischen den Seiten navigieren)
 
+===================================
+== (1) Strukturierung von Ansichten
+===================================
+
+-01- Navigationsleiste (Nutzer können so zwischen den Seiten navigieren)
+        
+        - Logo
         - Home (Home-Seite mit Vorschlägen zu aktuell möglichen Wetten) *2a)
         - Sport (Alle möglichen Sportwetten) *2b) -> nur wenn eingeloggt
         - Kurse (Alle möglichen Kurswetten) *2c) -> nur wenn eingeloggt
@@ -29,18 +35,68 @@
 -20-Tabelle (Verlauf und Zusammenfassung)
 -21-Form (Passwort ändern und Möglichkeit Guthaben aufzufüllen, wenn auf null)
 -22-Label (im Form für die input Felder)
--23-Eingabefeld (input Felder in den Forms)
--24-Button Submit (in Forms)
--24-Button (wenn Guthaben auf null auffüllen)
--25-Paragraph (z.B. Hinweise für Fehler bei der Übermittlung von Forms)
--26-Paragraph (z.B. Hinweise für Forms, evtl. mit Link "zur Registrierung")
--27-Kontrollkästchen (Form-Element)
--28-Footer (z.B. Datenschutz, Verwendung von Cookies, Nutzungsbedingungen, Impressum auf jeweiligen Seiten)
--29-h1 (Überschirften für z.B. Datenschutz, Verwendung von Cookies, Nutzungsbedingungen, Impressum auf jeweiligen Seiten)
--30-Article (Beinhaltet die Paragraphen in den o.g. Punkten aus dem Footer)
--31- Paragraph (Absätze in den o.g. Punkten aus dem Footer)
+-23-Eingabefeld (Input-Felder in den Forms)
+-24-Eingabefeld (Passwort-Input-Felder in den Forms)
+-25-Button Submit (in Forms)
+-26-Button (wenn Guthaben auf null auffüllen)
+-27-Paragraph (z.B. Hinweise für Fehler bei der Übermittlung von Forms)
+-28-Paragraph (z.B. Hinweise für Forms, evtl. mit Link "zur Registrierung")
+-29-Kontrollkästchen (Form-Element)
+-30-Footer (z.B. Datenschutz, Verwendung von Cookies, Nutzungsbedingungen, Impressum auf jeweiligen Seiten)
+-31-h1 (Überschirften für z.B. Datenschutz, Verwendung von Cookies, Nutzungsbedingungen, Impressum auf jeweiligen Seiten)
+-32-Article (Beinhaltet die Paragraphen in den o.g. Punkten aus dem Footer)
+-33-Paragraph (Absätze in den o.g. Punkten aus dem Footer)
+-34-Image (Logo im Nav)
+-35-Titel-Links (Einzelne Punkte in der Navigationsleiste)
+
+=======================
+== (1.1) Gruppen bilden
+=======================
+
+I. Container mit Kursen
+    -04-Container(Graphen von Kursen)
+    -05-Graph
+    -11-Eingabefeld unter Graph (wie viel gesetzt werden soll)
+    -14-Button (long / Wette setzen)
+    -15-Button (short / Wette setzen)
+
+II. Container mit Wetten
+    -06-Container(Tabellen von Kursen oder Wettmöglichkeiten)
+    -09-Tabellen (mit Wettmöglichkeiten)
+    -10-Eingabefeld in Tabelle (wie viel gesetzt werden soll)
+    -13-Button (Wette setzen)
+
+III. Container mit Statistiken
+    -06-Container(Tabellen von Kursen oder Wettmöglichkeiten)
+    -16-Container ((Beinhaltet zwei Tabellen zum Wettverlauf [Sport / Kurse]))
+    -17-Tabelle (Wettverlauf Sport)
+    -18-Tabelle (Wettverlauf Kurse)
+    -19-Container (Beinhaltet Zusammenfassung gesetztes virtuelles Guthaben / gewonnenes virtuelles Guthaben)
+    -20-Tabelle (Verlauf und Zusammenfassung)
+    
+
+IV. Anmelden / Registrieren / Einstellungen
+    -21-Form (Passwort ändern und Möglichkeit Guthaben aufzufüllen, wenn auf null)
+    -22-Label (im Form für die input Felder)
+    -23-Eingabefeld (Input-Felder in den Forms)
+    -24-Eingabefeld (Passwort-Input-Felder in den Forms)
+    -25-Button Submit (in Forms)
+    -27-Paragraph (z.B. Hinweise für Fehler bei der Übermittlung von Forms)
+    -28-Paragraph (z.B. Hinweise für Forms, evtl. mit Link "zur Registrierung")
+    -29-Kontrollkästchen (Form-Element)
+    (-26-Button (wenn Guthaben auf null auffüllen))
+
+V. Unterseite Footer (z.B. Impressum, Datenschutz...)
+    -31-h1 (Überschirften für z.B. Datenschutz, Verwendung von Cookies, Nutzungsbedingungen, Impressum auf jeweiligen Seiten)
+    -32-Article (Beinhaltet die Paragraphen in den o.g. Punkten aus dem Footer)
+    -33-Paragraph (Absätze in den o.g. Punkten aus dem Footer)
+    
+VI. Navigationsleiste
+    -34-Image (Logo im Nav)
+    -35-Titel-Links (Einzelne Punkte in der Navigationsleiste)
 
 ==========Gedankenstütze:==========
+
 2b) SPORT:  
 Container (Beinhaltet die Tabellen mit den Spielen, auf die gewettet werden kann)
                 - Tabelle (unterschiedlich viele Zeilen (je nach Spielanzahl); 6 Spalten: 1. Zeit, 2. Begegnung, 3. Sieg1, 4. Unentschieden, 5. Sieg2, 6. Betrag der eingesetzt werden soll)
