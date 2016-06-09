@@ -14,25 +14,25 @@
         - Profil (persönliche Daten einsehen und ändern) *2e) -> nur wenn eingeloggt
         - Logout (ausloggen) -> zurück zur Home Seite (nicht eingeloggt: *2a)) -> nur wenn eingeloggt, ansonsten Login/Registrieren *2x) und *2y)
 
--02-Container (4 x Beinhalten jeweils 2 bis 4 Container mit aktuell möglichen Spielen/Wetten und jeweils einem Bild -> Kachelartiger Aufbau)
--03-Container(Inhalt z.B.: der -04-Container mit: Aktuelle Resultate, Aktuelle Kurswerte, Aktuelle Sportwetten, Aktuelle Kuswetten)
--04-Container(Graphen von Kursen)
+-02-figcaption (4 x Beinhalten jeweils 2 bis 4 <figure> Elemente mit aktuell möglichen Spielen/Wetten und jeweils einem Bild -> Kachelartiger Aufbau)
+-03-figcaption(Inhalt z.B.: das -04- <figure> ELement mit: Aktuelle Resultate, Aktuelle Kurswerte, Aktuelle Sportwetten, Aktuelle Kuswetten)
+-04-figure(Graphen von Kursen)
 -05-Graph
--06-Container(Tabellen von Kursen oder Wettmöglichkeiten)
--07-Tabellen (mit Kursen)
--08-Tabellen (Resultaten)
--09-Tabellen (mit Wettmöglichkeiten)
+-06-figure(Tabellen von Kursen oder Wettmöglichkeiten;) 
+-07-Tabellen (mit Kursen), Zeilenanzahl abhängig von momentan möglicher Anzahl an Kurswetten, 5 Spalten: Kursname, Kurstand, Einsatz, long, short
+-08-Tabellen (mit Resultaten), Zeilenanzahl abhängig von momentan laufenden Spielen, 5 Spalten: Begegnung + Spielzeit, Sieg1, Unentschieden, Sieg2, Betrag
+-09-Tabellen (mit Wettmöglichkeiten), Zeilenanzahl abhängig von momentan möglicher Anzahl an Wetten, 5 Spalten: Begegnung + Spielzeit, Sieg1, Unentschieden, Sieg2, Betrag
 -10-Eingabefeld in Tabelle (wie viel gesetzt werden soll)
 -11-Eingabefeld unter Graph (wie viel gesetzt werden soll)
 -12-Textfeld (Zur Beschriftung und Betitelung)
 -13-Button (Wette setzen)
 -14-Button (long / Wette setzen)
 -15-Button (short / Wette setzen)
--16-Container ((Beinhaltet zwei Tabellen zum Wettverlauf [Sport / Kurse]))
--17-Tabelle (Wettverlauf Sport)
--18-Tabelle (Wettverlauf Kurse)
--19-Container (Beinhaltet Zusammenfassung gesetztes virtuelles Guthaben / gewonnenes virtuelles Guthaben)
--20-Tabelle (Verlauf und Zusammenfassung)
+-16-figure ((Beinhaltet zwei Tabellen zum Wettverlauf [Sport / Kurse]))
+-17-Tabelle (Wettverlauf Sport) Zeilenanzahl abhängig von gemachten Wetten, 4 Spalten: Datum, Gesetzt, Ergebnis, Verlust/Gewinn
+-18-Tabelle (Wettverlauf Kurse) Zeilenanzahl abhängig von gemachten Wetten, 5 Spalten: Zeit Einstieg, Zeit Ausstieg, Kursentwicklung, Gesetzt, Gewinn/Verlust
+-19-figure (Beinhaltet Zusammenfassung gesetztes virtuelles Guthaben / gewonnenes virtuelles Guthaben)
+-20-Tabelle (Verlauf und Zusammenfassung) Zeilenanzahl abhängig von gemachten Wetten, 3 Spalten: Datum, Art der Wette (Kurs, Sport), Gewinn/Verlust
 -21-Form (Passwort ändern und Möglichkeit Guthaben aufzufüllen, wenn auf null)
 -22-Label (im Form für die input Felder)
 -23-Eingabefeld (Input-Felder in den Forms)
@@ -54,25 +54,25 @@
 == (1.1) Gruppen bilden
 =======================
 
-I. Container mit Kursen
-    -04-Container(Graphen von Kursen)
+I. Elemente mit Kursen
+    -04-figure(Graphen von Kursen)
     -05-Graph
     -11-Eingabefeld unter Graph (wie viel gesetzt werden soll)
     -14-Button (long / Wette setzen)
     -15-Button (short / Wette setzen)
 
-II. Container mit Wetten
-    -06-Container(Tabellen von Kursen oder Wettmöglichkeiten)
+II. Elemente mit Wetten
+    -06-figure(Tabellen von Kursen oder Wettmöglichkeiten)
     -09-Tabellen (mit Wettmöglichkeiten)
     -10-Eingabefeld in Tabelle (wie viel gesetzt werden soll)
     -13-Button (Wette setzen)
 
 III. Container mit Statistiken
-    -06-Container(Tabellen von Kursen oder Wettmöglichkeiten)
-    -16-Container ((Beinhaltet zwei Tabellen zum Wettverlauf [Sport / Kurse]))
+    -06-figure(Tabellen von Kursen oder Wettmöglichkeiten)
+    -16-figure ((Beinhaltet zwei Tabellen zum Wettverlauf [Sport / Kurse]))
     -17-Tabelle (Wettverlauf Sport)
     -18-Tabelle (Wettverlauf Kurse)
-    -19-Container (Beinhaltet Zusammenfassung gesetztes virtuelles Guthaben / gewonnenes virtuelles Guthaben)
+    -19-figure (Beinhaltet Zusammenfassung gesetztes virtuelles Guthaben / gewonnenes virtuelles Guthaben)
     -20-Tabelle (Verlauf und Zusammenfassung)
     
 
