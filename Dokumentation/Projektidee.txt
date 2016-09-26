@@ -88,3 +88,119 @@ Leider haben Sie seit dem letzten Feedback an der Beschreibung nicht weiter gear
 Leider keine Änderungen seit dem letzten Feedback. 
 
 Bitte beachten Sie, dass eine der Voraussetzungen zum Erhalt des Leistungsnachweises darin besteht, dass Sie kontinuierlich am Projekt arbeiten. Wie schon mehrfach erklärt gilt: Kontinuierliches Arbeiten bedeutet jede Woche am Projekt zu arbeiten. Und da für das Projekt ein Arbeitsaufwand von 80 Stunden (innerhalb der 16 Wochen Vorlesungszeit) aufgebracht werden soll, bedeutet das, dass Sie pro Woche 5 Stunden für das Projekt investieren müssen. Wenn Sie weiterhin deutlich weniger am Projekt arbeiten, dann muss ich es auf der Basis des aktuellen Stands bewerten.
+===================================
+=== Feedback Alpers, 2016-09-26 ===
+===================================
+
+=== Grundsätzlicher Hinweise:
+Wichtig: Wenn Sie hier Änderungen einpflegen, dann ändern Sie bitte das Datum ab, da es sonst so wirkt, als hätten Sie nichts geändert.
+
+Beim pull erschien folgende Meldung: "unable to create file Gruppen_de/Anmeldungen:Registrieren:Einstellungen.php"
+
+=== Zu umfangreich, keine klare Trennung.
+Leider schreiben Sie auch deutlich zu umfangreich. Hier ein Beispiel:
+
+Welche nutzungsrelevanten Daten werden gespeichert und wie werden diese ausgewertet?
+In einer Datenbank werden zu jedem Nutzer Nutzungsdaten gespeichert. Es wird aufgezeichnet, wie viel er wettet, welche Art von Wetten (Kurs oder Spiel) und inwieweit seine Wetten von der Normalverteilung abweichen (z.B. wettet er immer auf das gleiche Team egal ob es Favorit ist oder nicht oder wetter er viel öfter auf steigende als auf fallende Kurse). Diese Daten werden dann verwendet, um dem Nutzer zum Beispiel Merchandise Artikel seines Teams anzubieten oder ihm Tipps zur Kursentwicklung zu geben.
+
+-> Dieser Absatz ergibt zusammengefasst:
+
+- Es wird für jeden Spieler gespeichert:
+-- Höhe des Wetteinsatzes
+-- Art der Wette (Kurs/Spiel)
+
+- Daraus wird abgeleitet:
+-- Wettverhalten des Spielers:
+--- auf gleiches/wechselndes Team
+--- Un-/regelmäßigkeit auf steigend/fallend
+
+- Auswertung:
+-- Basis fürs Marketing
+-- Tipps zur Kursentwicklung
+
+Passen Sie die Beschreibung bitte vollständig an, da es sonst nicht möglich ist, von der Beschreibung zur strukt.html zu schließen.
+
+-> Inhaltliches Feedback:
+
+a) Die Interaktionen zwischen Spieler und Computerprogramm sollen in der Form ablaufen, dass der Spieler mit dem Spiel tatsächlich eine Art Gegenseite hat. Hier wären beispielsweise Ereignisse denkbar, die eine Auswirkung auf die Kurse haben und die vom Verhalten einzelner Spieler abhängen. Hier erschließt sich nicht, wie das Merchandising-Artikel für das eigentliche Spiel (Wetten auf Kurse) eine relevante Auswirkung hat.
+b) Die Kurse werden rein zufällig ermittelt. Also sind Tipps für die weitere Kursentwicklung unmöglich.
+
+=== Schlecht: Einzig der Zufall ist relevant.
+Da die Kurse effektiv rein zufällig bestimmt werden gibt es für Spieler keinerlei Möglichkeit, durch eigene Entscheidungen einen relevanten Einfluss aufs Spielgeschehen zu haben. Damit ist es kein Spiel, sondern bestenfalls eine Demo.
+
+===
+=== Bezüglich der Programmierung der Gruppen
+===
+
+Zunächst sollten Sie die Gruppen so benennen, dass aus der Bezeichnung einer Gruppe der Dateinamen der entsprechenden PHP-Datei folgt. Leerzeichen sind dabei sehr schlecht. Aber auch die Umsetzung ist schlicht nicht vorhanden. Hier ein Beispiel:
+
+I. Elemente mit Kursen
+    -04-figure(Graphen von Kursen)
+    -05-Graph
+    -11-Eingabefeld unter Graph (wie viel gesetzt werden soll)
+    -14-Button (long / Wette setzen)
+    -15-Button (short / Wette setzen)
+	
+Daraus würde eine Datei namens Elemente mit Kurse.php folgen, was wegen der Leerzeichen schlecht ist. Eine solche Datei haben Sie auch angelegt, aber es befindet sich nichts drin.
+
+Die beiden einzigen Dateien in Gruppen_de, die Sie angelegt haben heiten Footer.php und Navigationsleiste.php.
+
+Schauen wir uns erstere an:
+
+VII. Footer
+    -36-Links (Zu den Unterseiten des Footers)
+	
+<footer>
+    <nav>
+        <a href=/datenschutz>Datenschutz</a>
+        <a href=/cookies>Verwendung von Cookies</a>
+        <a href=/nutzungsbedingungen>Nutzungsbedingungen</a>
+        <a href=/impressum>Impressum</a>
+    </nav>
+</footer> <!-- Ende des Footer-Elements -->  
+
+Die Verlinkungen sind leider allesamt falsch. Zum einen wegen der falschen Position der zugehörigen Views, zum anderen haben Sie hier Bezeichnungen verwendet, die keinem definierten View entsprechen.
+
+VI. Navigationsleiste
+    -34-Image (Logo im Nav)
+    -35-Titel-Links (Einzelne Punkte in der Navigationsleiste)
+	
+Hier sind wir bei einem der Fälle, auf den ich im letzten Feedback hingewiesen habe: Sie führen mit -35- etwas auf, von dem gänzlich unklar ist, was es sein soll.
+
+<nav>
+    <img src=images/test.png alt="Logo">
+    
+    <a href=/home>Home</a>
+    
+    <?php
+    //Wenn User eingeloggt ist, wird dieser Teil im Menü angezeigt.
+    if (isLoggedIn){
+        echo "<a href=/sport>Sport</a>
+              <a href=/kurse>Kurse</a>
+              <a href=/statistik>Statistik</a>
+              <a href=/profil>Profil</a>
+              <a href=/logout>Logout</a>";
+    }
+    //Wenn nicht eingeloggt, wird dieser Teil angezeigt.
+    else ()
+        echo "<a href=/login>Login/Registrieren</a>";
+    ?>
+    
+</nav>
+
+Und dieser Quellcode entspricht nicht der Definition in der strukt.html, denn der ergäbe folgendes:
+
+<img> ... </img>
+// Titel-Links
+
+===
+=== Bezüglich der Programmierung der Views
+===
+
+Die views sind falsch benannt.
+Sie befinden sich im falschen Verzeichnis.
+Die Gruppen wurden nicht included.
+
+Dementsprechend ergibt sich zurzeit keine Änderung der Wertung.
+
+Darüber hinaus habe ich beim letzten Feedback von vor zwei Monaten klar geschrieben, dass Sie einen Fehlversuch erhalten werden, wenn Sie nicht umgehend deutlich mehr Zeit in das Projekt investieren. Wie unter https://github.com/janman22/PRG/commits/master klar erkennbar ist, haben Sie das aber nicht getan.
