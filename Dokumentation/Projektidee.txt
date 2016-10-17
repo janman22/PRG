@@ -1,6 +1,6 @@
-========================================
-=== Projektidee janman22, 2016-04-05 ===
-========================================
+===================================================
+=== Projektidee janman22, Änderungen 2016-10-10 ===
+===================================================
 
 Meine Idee besteht in der Erstellung einer Webanwendung, die es ihren Nutzern erlaubt, Wetten auf virtuelle Kursentwicklungen und virtuelle Sportergebnisse von imaginären Sportarten zu setzen. Die Entwicklung der Kurse wird durch den Zufall und durch ausgewählte Umweltfaktoren bestimmt, die nur die Entwickler der Anwendung kennen.
 
@@ -12,13 +12,42 @@ Es wird virtuelles Guthaben eingesetzt. Bei der Anmeldung erhält der/die Nutzer
 
 Details:
 wie werden die Kursentwicklungen erzeugt?
-Die Kursentwicklungen werden zufällig erzeugt, das heißt, die Wahrscheinlichkeit, dass der Kurs gleich bleibt, dass der Kurs steigt und dass der Kurs fällt ist jeweils 33,33… %. Eine dieser drei Möglichkeiten wird einmal pro Sekunde ausgewählt und dementsprechend entwickelt sich der Kurs. Die Anzahl an Punkten, die der Kurs sich entwicklen kann wird zufällig über eine Normalverteilung ausgewählt. Der wahrscheinlichste Wert ist eins und der unwahrscheinlichste ist 10. Die Wahrscheinlichkeiten der Kursentwicklung ändern sich, je nach der Temperatur in der Hauptstadt von Hawaii (Honululu). Liegt die Temperatur über der Durschnittstemperatur des entsprechenden Tages, steigt die Wahrscheinlichkeit, dass der Kurs steigt um die Abweichung in Grad multipliziert mit 10 Prozentpunkte/Grad. Liegt die Temperatur unter der Durschnittstemperatur des entsprechenden Tages, steigt die Wahrscheinlichkeit, dass der Kurs fällt um die Abweichung in Grad multipliziert mit 10 Prozentpunkte/Grad.
+
+-Das Vorzeichen der Kusentwicklungen wird NICHT zufällig ausgewählt sondern errechnet, sodass Nutzer durch Analyse eine Strategie entwickeln können, mit der mehr gewonnen werden kann. 
+--Die Wahrscheinlichkeiten der Kursentwicklung ändern sich, je nach der Temperatur in der Hauptstadt von Hawaii (Honululu). Liegt die Temperatur über der Durschnittstemperatur des entsprechenden Tages, steigt die Wahrscheinlichkeit, dass der Kurs steigt um die Abweichung in Grad multipliziert mit 10 Prozentpunkte/Grad. Liegt die Temperatur unter der Durschnittstemperatur des entsprechenden Tages, steigt die Wahrscheinlichkeit, dass der Kurs fällt um die Abweichung in Grad multipliziert mit 10 Prozentpunkte/Grad. 
+--Außerdem hängen die Wahrscheinlichkeiten im ähnlichem Maße auch vom Tag des Monats ab. Je weiter man sich am Wetttag vom 15. des Monats entfernt befindet, desto stärker ist der Einfluss. Die Veränderung der Wahrscheinlichkeit, ob das Vorzeichen negativ oder positiv ist, lässt sich wie folgt berechnen:
+Wettag(z.B. 12. des Monats) - 15 * 1% = Prozentualer Einfluss
+negatives Ergebnis bedeutet höhere Wahrscheinlichkeit einer negativen Kursentwicklung
+positives Ergebnis bedeutet höhere Wahrscheinlichkeit einer positiven Kursentwicklung
+
+-Die Anzahl an Punkten, die der Kurs sich entwicklen kann, wird zufällig erzeugt. Der kleinste Wert ist 0 und der größte ist 9. Die Wahrscheinlichkeit, dass der Kurs sich um 1,2,3,4,5,6,7,8 oder 9 ändert (ob nach oben oder nach unten wird über das oben beschriebene Verfahren errechnet) ist jeweils 10%. Eine dieser Möglichkeiten wird einmal pro Sekunde ausgewählt und dementsprechend entwickelt sich der Kurs.
+
 
 Welche nutzungsrelevanten Daten werden gespeichert und wie werden diese ausgewertet?
-In einer Datenbank werden zu jedem Nutzer Nutzungsdaten gespeichert. Es wird aufgezeichnet, wie viel er wettet, welche Art von Wetten (Kurs oder Spiel) und inwieweit seine Wetten von der Normalverteilung abweichen (z.B. wettet er immer auf das gleiche Team egal ob es Favorit ist oder nicht oder wetter er viel öfter auf steigende als auf fallende Kurse). Diese Daten werden dann verwendet, um dem Nutzer zum Beispiel Merchandise Artikel seines Teams anzubieten oder ihm Tipps zur Kursentwicklung zu geben.
+- Es wird für jeden Spieler gespeichert:
+-- Höhe des Wetteinsatzes
+-- Art der Wette (Kurs/Spiel)
+
+- Daraus wird abgeleitet:
+-- Wettverhalten des Spielers:
+--- auf gleiches/wechselndes Team
+--- Un-/regelmäßigkeit auf steigend/fallend
+
+- Auswertung:
+-- Basis fürs Marketing
+-- Tipps zur Kursentwicklung
+
 
 Welche Arten von Interaktionen soll es geben?
-Die Nutzer interagieren mit der Software indem sie Wetten abschließen und dann ein Feedback bekommen, ob sie gewonnen oder verloren haben. Bei Kursen können sie den Einstiegs- und den Aufstiegszeitpunkt selbst bestimmen. Ansonsten können sie Ihre Statistiken einsehen und analysieren. Außerdem erhalten Sie auf Basis ihrer gespeicherten Nutzungsdaten individualisierten Inhalt, der oben beschrieben wurde. Sie analyieren ihr ehemaliges Verhalten und versuchen dann (wenn Sie die Regeln der Stochastik nicht kennen) aus diesem verhalten, auf ein verbessertest Wett-Verhalten in der Zukunft zu schließen.
+-Möglichkeiten der Interaktion:
+--Wetten abschließen (Sport & Kurs)
+---dazu in Echtzeit Feedback bekommen, wie ihre Gewinn/Verlust sich verhält
+---Einstiegs- und Ausstiegszeitpunkt kann selbst bestimmt werden.
+
+--Statistiken können eingesehen und analysiert werden.
+---individualisierter Inhalt auf Basis der Statistiken (wie oben beschrieben)
+---Analysieren und Rückschlüsse auf zukünftiges Wettverhalten schließen - Wie kann mehr gewonnen werden?
+
 
 ===================================
 === Feedback Alpers, 2016-04-06 ===
